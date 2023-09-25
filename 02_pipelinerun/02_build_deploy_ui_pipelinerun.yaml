@@ -15,7 +15,10 @@ spec:
   workspaces:
   - name: shared-workspace
     volumeClaimTemplate:
+      metadata: 
+        name: workspace
       spec:
+        storageClassName: nfs-client
         accessModes:
           - ReadWriteOnce
         resources:
